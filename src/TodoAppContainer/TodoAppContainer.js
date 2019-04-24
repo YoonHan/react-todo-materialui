@@ -19,8 +19,6 @@ class TodoAppContainer extends Component {
   }
 
   deleteTodoItem = (itemIdx) => {
-    console.log(this.state.todos);
-    console.log(itemIdx);
     let updatedArr = [...this.state.todos];
 
     if (itemIdx !== -1) {

@@ -4,10 +4,11 @@ import TodoItem from '../TodoItem';
 
 class TodoListsContainer extends Component {
   render() {
-    let todoLists = this.props.todos.map((todo, index) => {
+    const { todos, deleteTodoItem } = this.props;
+    let todoLists = todos.map((todo, index) => {
     return (
-      <TodoItem todo={todo} todos={this.props.todos} key={index} 
-                deleteTodoItem={this.props.deleteTodoItem} />
+      <TodoItem todo={todo} todos={todos} key={index} 
+                deleteTodoItem={deleteTodoItem} />
       )
     });
 
