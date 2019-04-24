@@ -23,6 +23,12 @@ class AddTodoList extends Component {
   }
 
   handleOnClick = () => {
+
+    if (this.state.todoText === '') {
+      window.alert('Please enter text !');
+      return 
+    }
+
     this.props.addTodoList(this.state.todoText);
     this.setState({ todoText: '' });
   }
