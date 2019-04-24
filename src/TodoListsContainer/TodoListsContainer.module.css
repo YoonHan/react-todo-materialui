@@ -1,0 +1,9 @@
+.bar {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 10px 0 10px 15px;
+  border-bottom: 1px solid #efefef;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}

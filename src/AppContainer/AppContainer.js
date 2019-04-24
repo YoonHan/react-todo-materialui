@@ -40,7 +40,7 @@ class AppContainer extends Component {
 
     return (
       <div className={styles['app-container']}>
-        <h2 className={styles.title}>
+        <h2 className={styles['title']}>
           <i className={`material-icons ${styles.icon}`}>check_circle_outline</i>
           Simple Todo Application
         </h2>

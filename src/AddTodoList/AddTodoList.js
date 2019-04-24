@@ -14,8 +14,16 @@ const customizedStyles = {
 
 class AddTodoList extends Component {
 
+  state = {
+    todoText: ''
+  }
+
+  handleOnChange = (e) => {
+    this.setState({ todoText: e.target.value })
+  }
+
   handleOnClick = () => {
-    window.alert('clicked!');
+    this.props.addTodoList(this.state.todoText);
   }
 
   render() {
@@ -24,12 +32,12 @@ class AddTodoList extends Component {
     return (
       <div className="container">
         <div className={styles['wrapper']}>
-          <InputBase className={classes.input} placeholder="Add Todo List..." />
+          <InputBase id="todo-text" className={classes.input} placeholder="Add Todo List..." 
+                     onChange={this.handleOnChange} />
           <IconButton onClick={this.handleOnClick}>
             <Add style={{color: 'green'}} />
-          </IconButton >
+          </IconButton>
         </div>
-        <div className={styles['bar']}>Todos</div>
       </div>
     );
   }

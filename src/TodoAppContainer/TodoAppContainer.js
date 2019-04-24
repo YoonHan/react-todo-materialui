@@ -3,20 +3,26 @@ import styles from './TodoAppContainer.module.css';
 import AddTodoList from '../AddTodoList';
 import TodoListContainer from '../TodoListsContainer';
 
-class TodoAppContainer extends Component {
+const TODOS = [
+  'Make Todo Application 1',
+  'Make Todo Application 2',
+]
 
+class TodoAppContainer extends Component {
+  
   state = {
     todos: TODOS
   }
 
-  handleAddTodoList = () => {
-
+  addTodoList = (todoText) => {
+    console.log(todoText);
+    this.setState({ todos: this.state.todos.concat(todoText)})
   }
 
   render() {
     return (
       <div className={styles['container']}>
-        <AddTodoList />
+        <AddTodoList addTodoList={this.addTodoList} />
         <TodoListContainer todos={this.state.todos} />
       </div>
     );
@@ -24,8 +30,3 @@ class TodoAppContainer extends Component {
 }
 
 export default TodoAppContainer;
-
-const TODOS = [
-  'Make Todo Application 1',
-  'Make Todo Application 2',
-]
