@@ -9,9 +9,11 @@ class TodoListsContainer extends Component {
     });
 
     return (
-      <div>
+      <div className={styles['container']}>
         <div className={styles['bar']}>Todos</div>
-        { todoLists }
+        <div className={styles['todo-lists']}>
+          { todoLists }
+        </div>
       </div>
     );
   }

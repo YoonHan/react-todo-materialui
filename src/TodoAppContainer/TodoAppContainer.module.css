@@ -1,4 +1,5 @@
-.todo-container {
-  padding: 10px;
-  overflow-y: auto;
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

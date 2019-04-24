@@ -30,7 +30,7 @@ class AddTodoList extends Component {
     const { classes } = this.props;
 
     return (
-      <div className="container">
+      <div className={styles['container']}>
         <div className={styles['wrapper']}>
           <InputBase id="todo-text" className={classes.input} placeholder="Add Todo List..." 
                      onChange={this.handleOnChange} />
