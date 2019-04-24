@@ -5,6 +5,7 @@
   height: 700px;
   padding-top: 10px;
   box-shadow: 0 0 15px 0px rgba(153,153,153,1);
+  border-radius: 5px;
 }
 
 .icon {

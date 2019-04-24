@@ -15,15 +15,25 @@ class TodoAppContainer extends Component {
   }
 
   addTodoList = (todoText) => {
-    console.log(todoText);
     this.setState({ todos: this.state.todos.concat(todoText)})
+  }
+
+  deleteTodoItem = (itemIdx) => {
+    console.log(this.state.todos);
+    console.log(itemIdx);
+    let updatedArr = [...this.state.todos];
+
+    if (itemIdx !== -1) {
+      updatedArr.splice(itemIdx, 1);
+      this.setState({ todos: updatedArr});
+    }
   }
 
   render() {
     return (
       <div className={styles['container']}>
         <AddTodoList addTodoList={this.addTodoList} />
-        <TodoListContainer todos={this.state.todos} />
+        <TodoListContainer todos={this.state.todos} deleteTodoItem={this.deleteTodoItem} />
       </div>
     );
   }
