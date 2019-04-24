@@ -24,6 +24,7 @@ class AddTodoList extends Component {
 
   handleOnClick = () => {
     this.props.addTodoList(this.state.todoText);
+    this.setState({ todoText: '' });
   }
 
   render() {
@@ -33,7 +34,7 @@ class AddTodoList extends Component {
       <div className={styles['container']}>
         <div className={styles['wrapper']}>
           <InputBase id="todo-text" className={classes.input} placeholder="Add Todo List..." 
-                     onChange={this.handleOnChange} />
+                     onChange={this.handleOnChange} value={this.state.todoText} />
           <IconButton onClick={this.handleOnClick}>
             <Add style={{color: 'green'}} />
           </IconButton>
