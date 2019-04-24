@@ -1,28 +1,10 @@
 import React, { Component } from 'react';
 import styles from './AppContainer.module.css';
-import { withStyles } from '@material-ui/core/styles';
+import './AppContainer.module.css';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import DummyTextContainer from '../DummyTextContainer';
 import TodoAppContainer from '../TodoAppContainer';
-
-const customizedStyles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-  },
-  tabsRoot: {
-    borderBottom: '1px solid #efefef',
-  },
-  tabsIndicator: {
-    backgroundColor: 'green',
-  },
-  tabRoot: {
-   '&:hover': {
-     color: 'green',
-     opacity: 1,
-   },
-  }
-})
 
 class AppContainer extends Component {
 
@@ -31,11 +13,10 @@ class AppContainer extends Component {
   }
 
   handleChange = (e, tabValue) => {
-    this.setState({ tabValue })
+    this.setState({ tabValue });
   }
 
   render() {
-    const { classes } = this.props;
     const { tabValue } = this.state;
 
     return (
@@ -44,16 +25,16 @@ class AppContainer extends Component {
           <i className={`material-icons ${styles.icon}`}>check_circle_outline</i>
           Simple Todo Application
         </h2>
-        <div className={classes.root}>
+        <div className={styles['tabs-wrapper']}>
           <Tabs value={tabValue} variant="fullWidth" onChange={this.handleChange}
-                classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
+                classes={{ root: styles['tabs-root'], indicator: styles['tab-indicator'] }}>
             <Tab 
               label="Dummy Text" 
-              className={classes.tabRoot}
+              classes={{ root: styles['tab-root']}}
             />
             <Tab 
               label="Todo App" 
-              className={classes.tabRoot}
+              classes={{ root: styles['tab-root']}}
             />
           </Tabs>
         </div>
@@ -64,7 +45,7 @@ class AppContainer extends Component {
   }
 }
 
-export default withStyles(customizedStyles)(AppContainer);
+export default AppContainer;
 
 const TEXT = 
 `

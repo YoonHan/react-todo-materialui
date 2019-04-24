@@ -19,3 +19,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.tab-indicator {
+  background-color: green;
+}
+
+.tabs-root {
+  border-bottom: 1px solid #efefef;
+}
+
+.tab-root:hover {
+  color: green;
+  opacity: 1;
+}
