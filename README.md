@@ -1,4 +1,4 @@
-# Simple React todo application with material-ui
+# Simple React todo application with Material-UI
 
 ![screenshot](screenshot.gif)
 
