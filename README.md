@@ -2,7 +2,7 @@
 
 ## 핵심 구현 내용
 
-- Tutorial 의 대명사인 To-do application 을 React로 간단하게 
+- Tutorial 의 대명사인 To-do application 을 React로 간단하게 구현.
 
 ## 실행방법
 1. 이 레포지토리를 로컬 컴퓨터에 clone 한다.
