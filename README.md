@@ -1,5 +1,7 @@
 # Simple React todo application with material-ui
 
+![screenshot](screenshot.gif)
+
 ## 핵심 구현 내용
 
 - Tutorial 의 대명사인 To-do application 을 React로 간단하게 구현.
